@@ -28,19 +28,7 @@ public class CardController {
     @RequestMapping("/hello")
     public String card(@RequestBody String str){
         List<Card> cards = new ArrayList<>();
-//        cards.add(new Card(1,1));
-//        cards.add(new Card(2,3));
-//        cards.add(new Card(3,3));
-//        cards.add(new Card(4,2));
-//        cards.add(new Card(5,3));
-//        cards.add(new Card(6,2));
-//        cards.add(new Card(7,3));
-//        cards.add(new Card(8,1));
-//        cards.add(new Card(9,2));
-//        cards.add(new Card(10,2));
-//        cards.add(new Card(11,2));
-//        cards.add(new Card(12,2));
-//        cards.add(new Card(13,2));
+
         try {
             JSONArray jsonArray = new JSONArray(str);
             for (int i = 0; i < jsonArray.length(); i++){
@@ -71,6 +59,54 @@ public class CardController {
                 cardJson.put("rank",card.getRank());
                 result.put(cardJson);
             }
+            return result.toString();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
+
+    @ResponseBody
+    @RequestMapping("/hello2")
+    public String card2(@RequestBody String str){
+        List<Card> cards = new ArrayList<>();
+        try {
+            JSONObject jsonObject = new JSONObject(str);
+            int id = jsonObject.getInt("id");
+            String cardStr = jsonObject.getString("card");
+            String[] cardSplit = cardStr.split(" ");
+            for (int i = 0; i < cardSplit.length; i++){
+                cards.add(new Card(cardSplit[i]));
+            }
+            Player player = new Player();
+            player.change(cards);
+            JSONObject result = new JSONObject();
+            JSONArray cardArray= new JSONArray();
+            String str1 = "";
+            String str2 = "";
+            String str3 = "";
+            for (int i = 0;i < player.choice.head.size(); i++){
+                Card card = player.choice.head.get(i);
+                str1 +=  card.toString();
+                if (i < player.choice.head.size() - 1)
+                    str1 += " ";
+            }
+            for (int i = 0;i < player.choice.mid.size(); i++){
+                Card card = player.choice.mid.get(i);
+                str2 +=  card.toString();
+                if (i < player.choice.mid.size() - 1)
+                    str2 += " ";
+            }
+            for (int i = 0;i < player.choice.end.size(); i++){
+                Card card = player.choice.end.get(i);
+                str3 +=  card.toString();
+                if (i < player.choice.end.size() - 1)
+                    str3 += " ";
+            }
+            cardArray.put(str1);
+            cardArray.put(str2);
+            cardArray.put(str3);
+            result.put("card",cardArray);
             return result.toString();
         } catch (JSONException e) {
             e.printStackTrace();
