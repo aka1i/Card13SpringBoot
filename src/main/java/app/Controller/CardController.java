@@ -72,7 +72,6 @@ public class CardController {
         List<Card> cards = new ArrayList<>();
         try {
             JSONObject jsonObject = new JSONObject(str);
-            int id = jsonObject.getInt("id");
             String cardStr = jsonObject.getString("card");
             String[] cardSplit = cardStr.split(" ");
             for (int i = 0; i < cardSplit.length; i++){

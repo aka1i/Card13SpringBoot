@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="092d5e11-9bd9-49cd-a5f6-ef07eed61e61" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Controller/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Controller/CardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Player.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,8 +60,11 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="IntelliLang.Configuration" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.uml" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -91,7 +92,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.HelloWorldMainApplication">
+  <component name="RunManager" selected="Application.Test">
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="app.Test" />
+      <module name="Card13SpringBoot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="Card13SpringBoot" />
       <extension name="coverage">
@@ -120,6 +134,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test" />
         <item itemvalue="Spring Boot.HelloWorldMainApplication" />
         <item itemvalue="Spring Boot.Application" />
       </list>
@@ -129,12 +144,7 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@564a722c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -155,8 +165,20 @@
       <workItem from="1570169744680" duration="3143000" />
       <workItem from="1570529350715" duration="1610000" />
       <workItem from="1570545344096" duration="915000" />
-      <workItem from="1570933067025" duration="4104000" />
+      <workItem from="1570933067025" duration="5719000" />
+      <workItem from="1570951252284" duration="4137000" />
+      <workItem from="1571071225146" duration="1753000" />
+      <workItem from="1571073573760" duration="2389000" />
+      <workItem from="1571076126335" duration="1526000" />
     </task>
+    <task id="LOCAL-00001" summary="修改接口格式">
+      <created>1570946561166</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1570946561166</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,10 +189,16 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="修改接口格式" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改接口格式" />
   </component>
 </project>

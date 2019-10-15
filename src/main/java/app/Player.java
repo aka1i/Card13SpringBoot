@@ -107,15 +107,15 @@ public class Player implements FinalTest
 	public void change(List<Card> handCard)
 	   {
 		   Collections.sort(handCard,new Comparator<Card>()          //从小到大排序
+	   {
+		   public int compare(Card c1, Card c2)
 		   {
-			   public int compare(Card c1, Card c2) 
-			   {  
-				   int i = c1.rank - c2.rank;  
-				   if(i == 0)  
-					   return c1.type - c2.type;    
-				   return i;
-				}   
-			});
+			   int i = c1.rank - c2.rank;
+			   if(i == 0)
+				   return c1.type - c2.type;
+			   return i;
+		   }
+	   });
 		   arrange(handCard);        //将牌整理到arr中
 		   
 		   if(arr.typenum4.size()==13||arr.typenum1.size()==13||arr.typenum2.size()==13||arr.typenum3.size()==13)            //至尊青龙
@@ -136,7 +136,7 @@ public class Player implements FinalTest
 			   choice.headType="shierhuangzu";
 			   return;
 		   }
-		   
+
 		   List<Card> continuous1=new ArrayList<Card>();                 //三同花顺
 		   List<Card> continuous2=new ArrayList<Card>();
 		   int t=-1,f1=-1;
@@ -595,7 +595,7 @@ public class Player implements FinalTest
 				   choice.headType="yidui";
 				   return;
 			   }
-			   
+
 			   if(arr.ranknum2.size()==4||arr.ranknum2.size()==2)
 			   {
 				   choice.mid.addAll(arr.ranknum2.subList(arr.ranknum2.size()-2, arr.ranknum2.size()));
@@ -1278,7 +1278,7 @@ public class Player implements FinalTest
 			   choice.midType="wulong";
 			   return;
 		   }
-		   
+
 		   if(arr.ranknum2.size()>2)
 		   {
 			   choice.end.addAll(arr.ranknum2.subList(arr.ranknum2.size()-4, arr.ranknum2.size()));
@@ -1290,11 +1290,17 @@ public class Player implements FinalTest
 				   choice.mid.add(arr.ranknum1.get(1));
 				   choice.midType="liangdui";
 			   }
-			   else if(arr.ranknum2.size()>=6)
+			   else if (arr.ranknum2.size() == 8)
+               {
+                   choice.mid.addAll(arr.ranknum2.subList(0, 4));
+                   choice.mid.add(arr.ranknum1.get(1));
+                   choice.midType="liangdui";
+               }
+			   else if(arr.ranknum2.size()==6)
 			   {
-				   choice.mid.addAll(arr.ranknum2.subList(2, 4));
+				   choice.mid.addAll(arr.ranknum2.subList(0, 2));
 				   choice.mid.addAll(arr.ranknum1.subList(1, 4));
-				   choice.midType="liangdui";
+				   choice.midType="yidui";
 			   }
 			   else if(arr.ranknum2.size()==4)
 			   {
@@ -1302,9 +1308,16 @@ public class Player implements FinalTest
 				   choice.mid.addAll(arr.ranknum1.subList(0, 2));
 				   choice.midType="wulong";
 			   }
-			   card.removeAll(choice.end);
-			   card.removeAll(choice.mid);
-			   choice.head.addAll(card);
+//               System.out.println(toString(choice.mid));
+//               System.out.println(toString(choice.end));
+//			   card.removeAll(choice.end);
+//			   card.removeAll(choice.mid);
+//			   choice.head.addAll(card);
+//
+//
+//               System.out.println(choice.headType);
+//               System.out.println(choice.midType);
+//               System.out.println(choice.endType);
 			   return;
 		   }
 	   }
