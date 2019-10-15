@@ -13,18 +13,18 @@ public class Card {
         this.rank = rank;
     }
 
-    public Card(String str){
-        str = str.toUpperCase();
-        if (str.charAt(0) == '*')
+    public Card(String cardString){
+        cardString = cardString.toUpperCase();
+        if (cardString.charAt(0) == '*')
             type = 2;
-        else if (str.charAt(0) == '#')
+        else if (cardString.charAt(0) == '#')
             type = 3;
-        else if (str.charAt(0) == '$')
+        else if (cardString.charAt(0) == '$')
             type = 4;
-        else if (str.charAt(0) == '&')
+        else if (cardString.charAt(0) == '&')
             type = 1;
 
-        switch (str.charAt(1)){
+        switch (cardString.charAt(1)){
             case '2':
                 rank = 1;
                 break;

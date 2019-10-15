@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="092d5e11-9bd9-49cd-a5f6-ef07eed61e61" name="Default Changelist" comment="" />
+    <list default="true" id="092d5e11-9bd9-49cd-a5f6-ef07eed61e61" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/RespCode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/RespEntity.java" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +173,7 @@
       <workItem from="1571071225146" duration="1753000" />
       <workItem from="1571073573760" duration="2389000" />
       <workItem from="1571076126335" duration="1526000" />
-      <workItem from="1571115814090" duration="413000" />
+      <workItem from="1571115814090" duration="1338000" />
     </task>
     <task id="LOCAL-00001" summary="修改接口格式">
       <created>1570946561166</created>

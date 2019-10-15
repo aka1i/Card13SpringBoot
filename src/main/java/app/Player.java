@@ -23,6 +23,7 @@ public class Player implements FinalTest
 	 		  case 2:s+='♣';break;
 	 		  case 3:s+='♦';break;
 	 		  case 4:s+='♠';break;
+			  default:
 	 		  }
 	 		  switch(c.rank)
 	 		  {
@@ -79,6 +80,7 @@ public class Player implements FinalTest
 		   case 2:arr.typenum2.add(handCard.get(i));break;
 		   case 3:arr.typenum3.add(handCard.get(i));break;
 		   case 4:arr.typenum4.add(handCard.get(i));break;
+		   default:
 		   }
 		}
 	}
@@ -338,13 +340,14 @@ public class Player implements FinalTest
 		   for(int i=1;i<5&&th1!=-1&&th2!=-1;i++)
 			   if(typen[i]==3)
 			   {
-				   List<Card>type=new ArrayList<Card>();
+				   List<Card> type=new ArrayList<>();
 				   switch(i)
 				   {
 				   case 1:type=arr.typenum1;break;
 				   case 2:type=arr.typenum2;break;
 				   case 3:type=arr.typenum3;break;
 				   case 4:type=arr.typenum4;break;
+				   default:
 				   }
 				   choice.head.addAll(type);
 				   switch(th1)
@@ -353,6 +356,7 @@ public class Player implements FinalTest
 				   case 2:type=arr.typenum2;break;
 				   case 3:type=arr.typenum3;break;
 				   case 4:type=arr.typenum4;break;
+				   default:
 				   }
 				   choice.mid.addAll(type);
 				   switch(th2)
@@ -361,6 +365,7 @@ public class Player implements FinalTest
 				   case 2:type=arr.typenum2;break;
 				   case 3:type=arr.typenum3;break;
 				   case 4:type=arr.typenum4;break;
+				   default:
 				   }
 				   if(choice.mid.get(4).rank>type.get(4).rank)
 				   {
@@ -489,6 +494,7 @@ public class Player implements FinalTest
 					  case 2:type=arr.typenum2;break;
 					  case 3:type=arr.typenum3;break;
 					  case 4:type=arr.typenum4;break;
+					  default:
 					  }
 					   choice.mid.addAll(type);
 					   card.removeAll(choice.mid);
@@ -504,6 +510,7 @@ public class Player implements FinalTest
 						  case 2:type=arr.typenum2;break;
 						  case 3:type=arr.typenum3;break;
 						  case 4:type=arr.typenum4;break;
+						  default:
 					  }
 					   if(!arr.ranknum3.isEmpty())
 					   {
@@ -744,6 +751,7 @@ public class Player implements FinalTest
 					   case 2:type=arr.typenum2;break;
 					   case 3:type=arr.typenum3;break;
 					   case 4:type=arr.typenum4;break;
+					   default:
 					   }
 					   choice.mid.addAll(type.subList(0, 5));
 					   card.removeAll(choice.mid);
@@ -775,6 +783,7 @@ public class Player implements FinalTest
 					   case 2:type=arr.typenum2;break;
 					   case 3:type=arr.typenum3;break;
 					   case 4:type=arr.typenum4;break;
+					   default:
 					   }
 					   if(!arr.ranknum3.isEmpty())
 					   {
@@ -963,6 +972,7 @@ public class Player implements FinalTest
 				   case 2:type=arr.typenum2;break;
 				   case 3:type=arr.typenum3;break;
 				   case 4:type=arr.typenum4;break;
+				   default:
 				   }
 				   if(typen[i]==5)                                    //中道为同花
 				   {
@@ -1082,6 +1092,7 @@ public class Player implements FinalTest
 			   case 2:type1=arr.typenum2;break;
 			   case 3:type1=arr.typenum3;break;
 			   case 4:type1=arr.typenum4;break;
+			   default:
 			   }
 			   switch(th2)
 			   {
@@ -1089,6 +1100,7 @@ public class Player implements FinalTest
 			   case 2:type2=arr.typenum2;break;
 			   case 3:type2=arr.typenum3;break;
 			   case 4:type2=arr.typenum4;break;
+			   default:
 			   }
 			   if(type1.get(type1.size()-1).rank>type2.get(type2.size()-1).rank)
 			   {
@@ -1115,6 +1127,7 @@ public class Player implements FinalTest
 			   case 2:type1=arr.typenum2;break;
 			   case 3:type1=arr.typenum3;break;
 			   case 4:type1=arr.typenum4;break;
+			   default:
 			   }
 			   if(type1.size()==5)
 				   choice.end.addAll(type1);
